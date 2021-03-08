@@ -14,6 +14,6 @@ class UserType(models.Model):
 
 class User(AbstractUser):
     email = models.EmailField(_('email address'), unique=True,)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE, blank=True, null=True)
-    user_type = models.ForeignKey(UserType, on_delete=models.CASCADE,blank=True, null=True)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    user_type = models.ForeignKey(UserType, on_delete=models.CASCADE)
 
